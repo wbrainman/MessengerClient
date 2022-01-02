@@ -30,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mMessenger = new Messenger(new IncomingHandler());
 
+
         Intent intent = new Intent();
         intent.setAction("com.example.demoMessengerService");
         intent.setPackage("com.example.demomessengerservice");
         bindService(intent, mConnection, BIND_AUTO_CREATE);
 
+        //2nd commit test
         Button button = findViewById(R.id.send);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
